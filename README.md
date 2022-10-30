@@ -48,3 +48,6 @@ Data is returned from the microservice in the following json format:
         "url": "https://www.forbes.com/sites/greatspeculations/2022/10/29/why-q3s-gdp-print-doesnt-mean-recession-avoidance/"
     }
 }
+
+![image](https://user-images.githubusercontent.com/12983146/198868670-7020de29-0f2c-497e-b2cb-e50212984573.png)
+
