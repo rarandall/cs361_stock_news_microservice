@@ -9,7 +9,7 @@ To request data from this microservice:
 - Send a valid stock ticker symbol (e.g. AMZN, MSFT, NFLX) as a string.
 
 To receive data from this microservice:
-- Data Will be received in JSON format (see example below);, so use the appropriate package to load the json data.
+- Data will be received in JSON format (see example below), so use the appropriate package to load the json data.
 
 
 ## Example call to the microservice:
