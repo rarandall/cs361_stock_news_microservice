@@ -1,20 +1,13 @@
 import requests
-import time
 import zmq
 import json
 from urllib import parse
 import urllib
+import auth
 
 context = zmq.Context()
 socket = context.socket(zmq.REP)
 socket.bind("tcp://*:5555")
-
-
-params = urllib.parse.urlencode({
-    'api_token': 'tFCbPxXlTl9xISy2MIY34o080M5xlqOftj9iPjdQ',
-    'symbols': socket.recv_string(),
-    'limit': 3,
-    })
 
 
 def process_data(json_data):
@@ -59,16 +52,22 @@ def process_data(json_data):
 
 
 while True:
-    #  Wait for next request from client
+    #  Wait for next ticker request from client
+    params = urllib.parse.urlencode({
+        'api_token': auth.API_KEY,
+        'symbols': socket.recv_string(),
+        'limit': 3,
+    })
+
+    # Get the ticker news from the API
     api_url = f'https://api.marketaux.com/v1/news/all?{params}'
     res = requests.get(api_url)
     msg = res.json()
 
-    #  Do some 'work'
-    time.sleep(1)
-
-    #  Send reply back to client
+    # Process the data
     msg_processed = process_data(msg)
+
+    #  Send data back to client
     socket.send_string(json.dumps(msg_processed))
 
 

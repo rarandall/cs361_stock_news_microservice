@@ -9,11 +9,11 @@ socket = context.socket(zmq.REQ)
 socket.connect("tcp://localhost:5555")
 
 #  Do 10 requests, waiting each time for a response
-for request in range(1):
-    symbol = "AMZN"
-    print(f"Sending request {request}: {symbol} …")
-    socket.send_string(symbol)
 
-    #  Get the reply.
-    message = json.loads(socket.recv())
-    print(f"Received reply {request} [ {message} ]")
+symbol = "MSFT"
+print(f"Sending request: {symbol} …")
+socket.send_string(symbol)
+
+#  Get the reply.
+message = json.loads(socket.recv())
+print(f"Received reply [ {message} ]")
