@@ -49,5 +49,5 @@ Data is returned from the microservice in the following json format:
     }
 }
 
-![image](https://user-images.githubusercontent.com/12983146/198868706-8a858ee4-aff8-4687-8fa9-2fb5b8d93170.png)
+![image](https://user-images.githubusercontent.com/12983146/198868935-a22d832e-2c35-4321-b260-15ee389dcb6f.png)
 
