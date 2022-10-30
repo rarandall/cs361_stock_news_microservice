@@ -8,6 +8,9 @@ To request data from this microservice:
 - Ensure you are connecting to the correct tcp address and port. 
 - Send a valid stock ticker symbol (e.g. AMZN, MSFT, NFLX) as a string.
 
+To receive data from this microservice:
+- Data Will be received in JSON format (see example below);, so use the appropriate package to load the json data.
+
 
 ## Example call to the microservice:
 
@@ -54,5 +57,6 @@ print(f"Received reply [ {message} ]")
     }
 }
 
+## UML sequence diagram
 ![image](https://user-images.githubusercontent.com/12983146/198868935-a22d832e-2c35-4321-b260-15ee389dcb6f.png)
 
