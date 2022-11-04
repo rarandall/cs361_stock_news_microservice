@@ -4,7 +4,7 @@ A zeromq microservice that responds to a stock ticker msg with highest sentiment
 To run the microservice:
 - Request an API Key from the external API provider from https://www.marketaux.com/
 - Update the auth.py file with your API key
-- pip install pyzmq==24.0.1
+- Install the required packages (pip install pyzmq==24.0.1, pip install requests)
 - Run the main.py file locally.
 
 To request data from this microservice:
