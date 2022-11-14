@@ -46,12 +46,10 @@ print(f"Received reply [ {message} ]")
 ### Data is returned from the microservice in the following json format:
 
 {
-    "data": {
         "highest": {
             "sentiment": 0.112267,
             "title": "My Current Favorite Stocks To Buy",
             "url": "https://seekingalpha.com/article/4550807-my-current-favorite-stocks-to-buy"
-        }
     },
     "lowest": {
         "sentiment": -0.0423,
