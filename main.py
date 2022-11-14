@@ -44,18 +44,17 @@ def process_data(json_data):
             min_title = headline['title']
             min_url = headline['url']
 
-    return json.dumps({'data':
-        {'highest': {
+    return json.dumps({
+        'highest': {
                 'sentiment': max_sentiment
                 , 'title': max_title
                 , 'url': max_url
-            }
         }, 'lowest': {
             'sentiment': min_sentiment
             , 'title': min_title
             , 'url': min_url
             }
-        }, indent=4)
+        })
 
 
 while True:
